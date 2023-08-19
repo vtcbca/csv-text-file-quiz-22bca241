@@ -1,0 +1,21 @@
+import csv
+
+line='''[['sonu',7856432345]
+['moni',9867453234]
+['riva',3432456787]
+['alvina',8160908976]
+['alvish',1243567865]]'''
+
+=>writer
+with open('contact.csv','w',newline='')as c:
+     x=csv.writer(c)
+     x.writerow(line)
+     print(line)
+
+=>reader
+from csv import reader
+with open('contact.csv','r',newline='',encoding="utfa")as d:
+    reading=reader(d)
+    for i in d:
+        print(i)
+        print(\n total no of row:)
